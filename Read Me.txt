@@ -1,0 +1,48 @@
+Read Me (1)
+-----------
+
+1) Tools required
+   --------------
+   - DOSBox0.74
+   - debug.exe
+
+   To use debug command
+   --------------------
+2.) Commands
+   - mount c c:\	;to connect to c drive
+
+   - c:			;to change directory to c drive
+  
+   - debug / debug.exe  ;to call debug program
+
+
+
+
+=======================================================================================================================
+Read Me (2)
+-----------
+
+1) Tools required
+   --------------
+   - DOSBox0.74
+   - 8086 Assembler
+
+   To build ASM program
+   --------------------
+2) Commands
+   - mount c c:\8086	;to connect to the assembler from c drive
+
+   - c:			;to change directory to c drive
+
+   - edit 1.asm		;to construct / edit the source file
+
+   - masm 1.asm		;to assembler the source file (.asm)
+			; to convert .asm to .obj & optionally .lst & .crf file
+
+   - link 1.obj		;to link the object file to executable file
+			; to convert .obj to .exe & .map file
+
+   - 1.exe		;to execute the executable file
+
+   - td 1.exe		;to trace & debug the executable file
+   
