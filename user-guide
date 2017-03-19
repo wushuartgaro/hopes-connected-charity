@@ -1,0 +1,69 @@
+Software used: DOSBox 0.74, notepad, 8086 folder
+Installation / Implementation guide:
+To assemble, link and execute the assembly program and  using DOSBox. Please type the following commands in DOSBox (with 8086 folder placed in C:\): 
+1.	MOUNT C C:\8086
+2.	C:
+3.	MASM HOPESCON.ASM
+4.	LINK HOPESCON.OBJ
+5.	HOPESCON
+Login Information:
+User Name: ABC			
+Password: 12345
+Step-by-step guideline to use the program
+
+LOGIN AND MAIN MENU:
+1.	User can enter the ABC as valid user name and 12345 as valid password to log into the system.
+2.	User name field is limited to 3 characters while password is limited to 5 characters to reduce the careless typing error. Input in the password filed is hidden with asterisk character (*) for security purpose.
+3.	Invalid password will be displayed out to notify user for any typing error while valid password won’t be shown for security purpose.
+4.	There is a trial(s) number left shown on the upper right corner of the screen, it will be decreased every time user failed to login with a wrong name and/or wrong password. After all three trials has been used up, system will exit automatically after showing an error message.
+5.	If user wants to exit from the login screen, then just leave blank in the user name field and press enter.
+6.	Choose between 1 to 4 to proceed with different main functions, choose 5 to exit the system
+7.	Choose 1 for Cash Donation, 2 for Goods Donation, 3 for Rating and Feedback and 4 for Join Volunteer.
+8.	Other inputs out of 1 to 5 will be invalid and invalid message will be displayed to let user to choose again.
+
+
+
+CASH DONATION:
+1.	Choose between 1 to 2 to proceed with different cash donations, choose 3 to go back to the main menu.
+2.	Choose 1 for Monthly Donation, 2 for One-Off Donation.
+3.	Other inputs out of 1 to 3 will be invalid and invalid message will be displayed to let user to choose again.
+
+MONTHLY DONATION:
+1.	User can enter the bank name, their respective bank account no. and amount to set up their monthly pledge.
+2.	The bank account no field is limited to 10 characters while monthly amount field is limited to 3 digits to prevent the value more than maximum amount of RM 999 and system won’t accept any input besides digit to prevent erroneous calculation.
+3.	For bank name field and bank account no, user can leave blank to go back to cash donation menu. While leaving 0 or blank in the Monthly Donation Amount field will also take user back to cash donation menu.
+4.	After all the fields is being filled, a confirmation message with calculation results for charges applied to the monthly donation (5% charged to be used for daily operation of foundation) and actual amount of donation being used directly on the unfortunate (Donation – (Donation*5%)) will be displayed. User can enter ‘Y’ or ‘y’ to proceed with the donation. 
+5.	Thank you message is shown as user entered ‘Y’ to agree with the donation. If user input other character s other than ‘Y’ or ‘y’, system will abandon this donation and jump back to cash donation menu.
+
+ONE-OFF DONATION:
+1.	System will display a list of charity organizations to be chosen by user for this one-off donation to go to. Choose between 1 to 4 to proceed with different charity organizations, choose 5 to exit the system. Other inputs out of 1 to 5 will be invalid and invalid message will be displayed to let user to choose again. 
+2.	Then, system will display different bank notes from RM 100 to RM 1 to let user enter the quantity for each one respectively. System will only accepts input from 0 to 9, other input will take user back to the list of charity organizations. This is to eliminate the erroneous calculation and provide a back option from the bank notes amount input process.
+3.	After all quantity has been entered, confirmation message with total amount of donation (Sum of all the bank notes multiply with their own quantity respectively) will be displayed. User can enter ‘Y’ or ‘y’ to proceed with the donation. 
+4.	Thank you message is shown as user entered ‘Y’ to agree with the donation. If user input other character s other than ‘Y’ or ‘y’, system will abandon this donation and jump back to cash donation menu.
+GOODS DONATION:
+1.	Goods Donation Screen will provide an item model field for user to enter the model of item that they would like to donate. The model can be in terms of code or product name like Birkenstock Eva, C++: From Beginner to Give Up and etc. Then the system will automatically analyze whether that particular item is obsolete to be used anymore or not. (NOTED: the obsolete condition doesn’t depends on the item model but depends on that particular item condition instead). User can leave blank to go back to main menu.
+2.	If the item is not obsolete then system will display a confirmation message for donation of that item. User can enter ‘Y’ or ‘y’ to proceed with the donation.
+3.	Thank you message is shown as user entered ‘Y’ to agree with the donation. If user input other character s other than ‘Y’ or ‘y’, system will abandon this donation and jump back to cash donation menu.
+4.	If the item is obsolete, a confirmation message is displayed to ask user whether they want to sent that item to Chee Keong Second Hand Sdn Bhd who will receive the item and donation 5% of item’s current value to the foundation. 
+5.	As user entered ‘Y’ for YES, system will estimate the current value of item based on the different market prices from various online stores’ price list and databases using Big Data Analysis which involve the Web crawler and A.I. filtering algorithm.The estimating progress will be displayed as 
+20%...40%...60%...80%...
+6.	After that, a Goods to Second Hand Donation Confirmation Form is displayed with item’s current value, second dealer’s respective donation and confirmation message to ask user whether they want to proceed with the donation.
+7.	As user entered ‘Y’ to agree with the donation, a thank you message is shown. If user input other character s other than ‘Y’ or ‘y’, system will abandon this donation and jump back to main menu.
+RATE AND COMMENT:
+1.	Rate and Comment screen will display the currently available four organizations to be chosen by user for rating and leaving comment together with their respective current rating.
+2.	User can choose between 1 to 4 to proceed with different charity organizations, choose 5 to go back to the main menu.
+3.	Other inputs out of 1 to 5 will be invalid and invalid message will be displayed to let user to choose again.
+4.	After user choose an organization, then system will display Rate and Comment form which consists of that particular organization’s name and rating status, a rating input field and a comment input field.
+5.	For rating, user can enter 1 to 5 star(s). Other inputs out of 1 to 5 will be invalid and invalid message will be displayed to let user to enter again. User can leave blank to go back to cash donation menu previous Rate and Comment Screen.
+6.	For comment field, user can leave it blank or left their own comment for that particular organization. 
+7.	Enter ‘0’ in comment field will take user back to the previous Rate and Comment Screen.
+8.	After the comment input, a confirmation message for uploading the rating and comment into foundation’s real time database will be displayed. User can enter ‘Y’ or ‘y’ to proceed with the rating and comment update.
+9.	Thank you message is shown as user entered ‘Y’ to agree with the uploading of rating and comment
+10.	Rate and Comment screen will be displayed with updated rating and number of people rated.
+
+
+JOIN VOLUNTEER:
+1.	Volunteer with us screen will prompt for the age of the user first before they can proceed to make sure they are 18 years old and above to be eligible as a volunteer for foundation. As user entered other characters besides ‘Y’ and ‘y’ for NO, the disqualified message is displayed and user to ask any key to go back.
+2.	As user entered ‘Y’ and ‘y’ for YES, a Volunteer Application Form with fields for full name, NRIC , gender, blood group, address, contact no, e-mail, contact person, contact person tel no, duty period and interest area will be displayed one by one for user to fill in.
+3.	User can leave blank in any input fields in the form to abandon this application and go back to main menu.
+4.	 As user filled all the information in the form successfully, the form submission message will be displayed together with a heart shape created using conditional jump.
